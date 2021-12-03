@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/fraud_bg"
+    >
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/teal_200"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mapTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/holo_red_light"
+            android:onClick="onClickMap"
+            android:padding="15dp"
+            android:rotation="-90"
+            android:text="Map"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/homeTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-5dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="onClickInfo"
+            android:padding="15dp"
+            android:rotation="-90"
+            android:text="Info"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@android:id/tabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="0.8"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/transparent_bg"
+            android:columnCount="2"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/txtHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_gravity="center"
+                android:layout_marginLeft="7dp"
+                android:text="Select the\ncounterfeit bill"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/lightbulb"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_gravity="top|right"
+                android:adjustViewBounds="true"
+                android:onClick="onClickLightbulb"
+                android:src="@drawable/lightbulb" />
+        </GridLayout>
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="1"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp">
+        <ImageView
+            android:id="@+id/bill_1"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_width="219dp"
+            android:layout_height="141dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="150dp"
+            android:adjustViewBounds="true"
+            android:onClick="onClickBill_1"
+            android:src="@drawable/real1" />
+
+        <ImageView
+            android:id="@+id/bill_2"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_width="214dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:onClick="onClickBill_2"
+            android:src="@drawable/real2" />
+
+        <ImageView
+            android:id="@+id/bill_3"
+            android:layout_width="212dp"
+            android:layout_height="147dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:onClick="onClickBill_3"
+            android:src="@drawable/fake_bill" />
+
+        <ImageView
+            android:id="@+id/top_incorrect"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="150dp"
+            android:layout_row="0"
+            android:layout_width="102dp"
+            android:layout_height="67dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/incorrect"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/center_incorrect"
+            android:layout_marginLeft="30dp"
+
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_width="102dp"
+            android:layout_height="67dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/incorrect"
+            android:visibility="invisible"/>
+
+        <ImageView
+            android:id="@+id/bottom_correct"
+            android:layout_marginLeft="30dp"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:layout_width="102dp"
+            android:layout_height="67dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/correct"
+            android:visibility="invisible" />
+    </GridLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+    </LinearLayout>
+
+</FrameLayout>

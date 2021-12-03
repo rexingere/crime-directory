@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/teal_200"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mapTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/holo_red_light"
+            android:onClick="onClickMap"
+            android:padding="15dp"
+            android:rotation="-90"
+            android:text="Map"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/homeTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-3dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="onClickInfo"
+            android:padding="15dp"
+            android:rotation="-90"
+            android:text="Info"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@android:id/tabcontent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:id="@+id/grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_gravity="right"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/black_bg"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/txtHint"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Refer to image\nof Lori Boffman"
+                android:layout_marginLeft="7dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:id="@+id/lightbulb"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="top|right"
+                android:adjustViewBounds="true"
+                android:onClick="onClickLightbulb"
+                android:src="@drawable/lightbulb" />
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/txtMinigame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:text="Find a piece of\nforensic evidence"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:padding="15dp"
+            android:paddingLeft="7dp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp">
+
+            <TextView
+                android:id="@+id/minigamePlaceholder"
+                android:layout_width="400dp"
+                android:layout_height="442dp"
+                android:layout_gravity="bottom"
+                android:adjustViewBounds="true"
+                android:background="@drawable/kidnap_bg"
+                android:paddingHorizontal="50dp"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:id="@+id/evidence"
+                android:layout_width="62dp"
+                android:layout_height="55dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="15dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/red_bandana"
+                android:onClick="onClickEvidence"/>
+
+            <ImageView
+                android:id="@+id/answer"
+                android:layout_width="62dp"
+                android:layout_height="55dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="15dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/correct"
+                android:visibility="invisible"/>
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+</FrameLayout>
